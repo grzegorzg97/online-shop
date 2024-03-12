@@ -1,0 +1,10 @@
+mat-grid-tile {
+    background: lightblue;
+    border-color: black;
+    border: dotted;
+    padding: 20px;
+    margin-right: 20px;
+  }
+.grid-list{
+    margin: 30px;
+}

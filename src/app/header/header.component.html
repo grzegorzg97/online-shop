@@ -1,1 +1,19 @@
+<mat-toolbar color="lightgrey">
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Kategorie</button>
+      <button mat-menu-item>Firmy</button>
+    </mat-menu>
+      <span style="cursor: pointer;" routerLinkActive="active" routerLink="">Sklepik</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+</mat-toolbar>
+
 
