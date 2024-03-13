@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MaterialModule } from 'src/app/material.module';
 
 
 
@@ -9,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule]
+  imports: [MaterialModule]
 })
 export class ItemComponent {
  

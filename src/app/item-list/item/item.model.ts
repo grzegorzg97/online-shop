@@ -6,7 +6,6 @@ export class Item {
     public producer: string;
     public price: number;
 
-
     constructor(name:string, description: string, imagePath: string,color: string, producer: string, price: number){
         this.name = name;
         this.description = description;
