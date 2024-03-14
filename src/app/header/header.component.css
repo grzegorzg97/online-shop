@@ -1,3 +1,14 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.header{
+  position: relative;
+  background-color: rgb(241, 240, 240);
+}
+.auto-spacer {
+  flex:auto;
+}
+.btn-category {
+  font-size: 18px;
+}
+

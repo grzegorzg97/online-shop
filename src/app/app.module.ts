@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item-list/item/item.component';
+import { LogoComponent } from './logo/logo.component';
+import { ItemFlatComponent } from './item-list/item-flat/item-flat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -19,7 +20,9 @@ import { ItemComponent } from './item-list/item/item.component';
     BrowserAnimationsModule,
     HeaderComponent,
     ItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    LogoComponent,
+    ItemFlatComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

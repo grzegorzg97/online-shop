@@ -4,7 +4,7 @@ import { Item } from "./item.model"
 @Injectable()
 export class ItemService {
 
-    item: Item[] = [
+    items : Item[] = [
         new Item ('Nazwa',
         'Opis',
         'https://img.freepik.com/premium-zdjecie/osiol-z-bialym-tlem-i-bialym-tlem_873925-22917.jpg',
