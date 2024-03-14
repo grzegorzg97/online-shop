@@ -94,19 +94,22 @@ body
 
 .product-price {
     font-size: 18px;
-    color: #fbb72c;
+    color: black;
     font-weight: 600;
+    text-decoration: underline;
 }
 
 .product-price small {
-    font-size: 80%;
+    font-size: 140%;
     font-weight: 400;
     text-decoration: line-through;
     display: inline-block;
     margin-right: 5px;
+    color: #fb2c2c;
 }
 
 .product-links {
     text-align: right;
 }
+
   
