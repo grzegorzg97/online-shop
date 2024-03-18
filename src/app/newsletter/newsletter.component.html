@@ -1,0 +1,11 @@
+<div class="container">
+        <p>
+            Podaj swój adres e-mail, jeżeli chcesz otrzymywać informacje o nowościach i promocjach. 
+        </p>
+        <mat-form-field>
+            <mat-label>Podaj email</mat-label>
+                <input matInput placeholder="przykladowy@mail.pl" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button>Zapisz się</button>
+</div>

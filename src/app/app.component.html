@@ -1,15 +1,24 @@
 <div>
     <div class="header"><app-header></app-header></div>
-    <div class="item-list">
-        <app-item-list></app-item-list>
-    </div>
-    <div class="item-flat-list">
-        <app-item-flat></app-item-flat>
-        <app-item-flat></app-item-flat>
-        <app-item-flat></app-item-flat>
-        <app-item-flat></app-item-flat>
-        <app-item-flat></app-item-flat>
-    </div>
+ <!--   <app-item></app-item>
+   <app-item-flat></app-item-flat> -->
+   <!-- <app-item-list></app-item-list> -->
+   <!-- <app-newsletter></app-newsletter> -->
+   <!-- <app-footer></app-footer> -->
+   <!-- <app-item-flat-list></app-item-flat-list> -->
+
+   <mat-button-toggle-group [(ngModel)]="sortType" #group="matButtonToggleGroup">
+    <mat-button-toggle value="grid-list">Lista
+    </mat-button-toggle>
+    <mat-button-toggle value="flat-list">123
+    </mat-button-toggle>
+</mat-button-toggle-group>
+<div *ngIf="sortType === 'flat-list'">
+<app-item-flat-list></app-item-flat-list>
+</div>
+<div *ngIf="sortType === 'grid-list'">
+<app-item-list></app-item-list>
+</div>
 </div>
 
 

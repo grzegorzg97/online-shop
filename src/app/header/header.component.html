@@ -1,12 +1,5 @@
 <mat-toolbar class="header" >
-    <button mat-icon-button  [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Kategorie</button>
-      <button mat-menu-item>Firmy</button>
-    </mat-menu>
-      <span style="cursor: pointer;">Sklepik</span>
+      <span class="shop-name" style="cursor: pointer;">Sklepik</span>
       <span class="auto-spacer"></span>
       <button class="btn-category" mat-button [matMenuTriggerFor]="menu2">Kategoria</button>
       <mat-menu #menu2="matMenu">
@@ -34,18 +27,6 @@
       <span class="auto-spacer"></span>
       <button class="btn-category" mat-button [matMenuTriggerFor]="menu6">Kategoria5</button>
       <mat-menu #menu6="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
-      <span class="auto-spacer"></span>
-      <button class="btn-category" mat-button [matMenuTriggerFor]="menu7">Kategoria6</button>
-      <mat-menu #menu7="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
-      <span class="auto-spacer"></span>
-      <button class="btn-category" mat-button [matMenuTriggerFor]="menu8">Kategoria7</button>
-      <mat-menu #menu8="matMenu">
         <button mat-menu-item>Item 1</button>
         <button mat-menu-item>Item 2</button>
       </mat-menu>

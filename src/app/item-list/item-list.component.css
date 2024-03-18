@@ -4,13 +4,12 @@
     height: 100vh;
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+    width: 80%;
 }
 table {
     width: 60%;
-    border-collapse: collapse;
- 
   }
-  
   th {
     padding: 8px;
     text-align: left;

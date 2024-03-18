@@ -8,7 +8,13 @@ import { HeaderComponent } from './header/header.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item-list/item/item.component';
 import { LogoComponent } from './logo/logo.component';
-import { ItemFlatComponent } from './item-list/item-flat/item-flat.component';
+import { ItemFlatComponent } from './item-list/item/item-flat/item-flat.component';
+import { FooterComponent } from './footer/footer.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { ItemFlatListComponent } from './item-flat-list/item-flat-list.component';
+import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +28,12 @@ import { ItemFlatComponent } from './item-list/item-flat/item-flat.component';
     ItemComponent,
     ItemListComponent,
     LogoComponent,
-    ItemFlatComponent
+    ItemFlatComponent,
+    FooterComponent,
+    NewsletterComponent,
+    ItemFlatListComponent,
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
