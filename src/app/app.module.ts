@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
     NewsletterComponent,
     ItemFlatListComponent,
     MaterialModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
