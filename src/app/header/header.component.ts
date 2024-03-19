@@ -3,6 +3,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { CommonModule } from '@angular/common';
+import { Category } from '../shared/category.model';
 
 
 @Component({
@@ -10,9 +12,9 @@ import {MatMenuModule} from '@angular/material/menu';
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css'],
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, CommonModule],
 })
 export class HeaderComponent {
   
- 
+  
 }

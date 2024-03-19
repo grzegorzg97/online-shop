@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { CommonModule } from '@angular/common';
-import { Item } from './item.model';
+import { Item } from '../../shared/item.model';
 import { ItemService } from './item.service';
 
 @Component({
