@@ -1,26 +1,7 @@
 <div class="container">
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    <app-item></app-item>
-    
-    <!-- <table>
-        <tbody>
-        <tr>
-            <td><app-item></app-item></td>
-            <td><app-item></app-item></td>
-            <td><app-item></app-item></td>
-        </tr>
-        <tr>
-            <td><app-item></app-item></td>
-            <td><app-item></app-item></td>
-            <td><app-item></app-item></td>
-        </tr>
-        </tbody>
-    </table> -->
+    <div *ngFor="let item of itemService.items"class="product-card">
+        <app-item [item]="item"></app-item>
+      </div>
 </div>
 
   

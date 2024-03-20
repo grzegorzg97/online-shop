@@ -1,10 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
-import { Category } from '../shared/category.model';
+import { Item } from '../shared/item.model';
+import { ItemService } from '../item.service';
 
 
 @Component({
@@ -16,5 +17,7 @@ import { Category } from '../shared/category.model';
 })
 export class HeaderComponent {
   
+  @Input() items: Item;
   
+  constructor(public itemService:ItemService) {}
 }

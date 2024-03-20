@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 
-
 @Component({
-  selector: 'app-item-flat-list',
+  selector: 'app-item-details',
   standalone: true,
   imports: [CommonModule, MaterialModule],
-  templateUrl: './item-flat-list.component.html',
-  styleUrls: ['./item-flat-list.component.css']
+  templateUrl: './item-details.component.html',
+  styleUrls: ['./item-details.component.css']
 })
-export class ItemFlatListComponent {
+export class ItemDetailsComponent {
 
 }

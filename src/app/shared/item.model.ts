@@ -1,19 +1,22 @@
-import { Category } from "./category.model";
+
 
 export class Item {
     public name: string;
     public description: string;
     public imagePath: string;
-    public color: string;
+    public weight: string;
+    public producer: string;
     public price: number;
-    public category: Category[];
+    public discount: number;
+    
 
-    constructor(name:string, description: string, imagePath: string,color: string, price: number, category: Category[]){
+    constructor(name:string, description: string, imagePath: string, weight:string, producer: string, price: number, discount:number){
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
-        this.color = color;
+        this.producer = producer;
+        this.weight = weight;
         this.price = price;
-        this.category = category;
+        this.discount = discount;
     }
 }

@@ -1,8 +1,8 @@
-<mat-toolbar class="header">
-      <span class="shop-name" style="cursor: pointer;">Sklepik</span>
+<mat-toolbar  class="header">
+      <span class="shop-name" style="cursor: pointer;">Nazwa sklepu</span>
       <span class="auto-spacer"></span>
-        <div class="btn-category">
-          <button mat-button [matMenuTriggerFor]="menu2">dupeczka</button>
+        <div *ngFor="let item of itemService.items" class="btn-category">
+          <button mat-button [matMenuTriggerFor]="menu2">{{ item.producer }}</button>
           <mat-menu #menu2="matMenu">
             <button mat-menu-item>Item 1</button>
             <button mat-menu-item>Item 2</button>

@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    top:100px;
+    height: 700px;
+    width: 80%;
+    margin:auto;
+    /* border: solid 2px red; */
+    
+}
+.image {
+    position: absolute;
+    top: 125px;
+    border: 1px solid black;
+    height: 450px;
+    padding: 20px;
+    transition: 1s;
+    cursor: pointer;
+    float: left;
+    box-shadow:5px 5px lightgray;
+}
+.image:hover{
+    transform: scale(1.15);
+}
+.details {
+    position: absolute;
+    left: 540px;
+    top: 100px;
+    height: 80%;
+    justify-content: center;
+    display: grid;
+    width: 500px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+
