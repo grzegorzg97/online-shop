@@ -1,4 +1,4 @@
-<div>
+<div class="main">
     <div class="header"><app-header></app-header></div>
    <mat-button-toggle-group [(ngModel)]="sortType" #group="matButtonToggleGroup">
     <mat-button-toggle value="grid-list"><mat-icon>view_module</mat-icon>
@@ -13,8 +13,8 @@
   <app-item-list></app-item-list>
   </div>
     <!-- <app-item-details></app-item-details> -->
-    <!-- <app-newsletter></app-newsletter> -->
-    <!-- <app-footer></app-footer>  -->
+    <app-newsletter></app-newsletter>
+    <app-footer></app-footer> 
 </div>
 
 

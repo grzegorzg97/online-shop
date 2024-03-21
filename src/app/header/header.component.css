@@ -9,5 +9,6 @@
 }
 .btn-category {
   font-size: 18px;
+  flex:auto;
 }
 

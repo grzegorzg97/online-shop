@@ -13,6 +13,7 @@ import { ItemFlatListComponent } from './item-flat-list/item-flat-list.component
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ItemFlatComponent } from './item-flat/item-flat.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ItemFlatListComponent,
     MaterialModule,
     FormsModule,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    ItemFlatComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

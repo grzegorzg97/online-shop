@@ -1,0 +1,19 @@
+<div class="product-card">
+    <div class="badge">-{{item.discount}}%</div>
+    <div class="product-tumb" >
+      <img src="{{item.imagePath}}" alt="osioł">
+    <div class="product-details">
+      <span class="product-category">{{item.producer}}</span>
+      <h4><a href="">{{item.name}}</a></h4>
+      <p>{{item.description}}</p>
+      <div class="product-bottom-details">
+        <div class="product-price"><small>{{item.price}}zł</small>{{item.price*(item.discount*0.01)}}zł</div> 
+        <div class="product-links">
+          <button mat-icon-button>
+            <mat-icon>add_shopping_cart</mat-icon>
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
