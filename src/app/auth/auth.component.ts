@@ -64,7 +64,7 @@ export class AuthComponent {
   onHandleError(){
       this.error = null;
   }
-  ngOnDestroy(): void {
+  ngOnDestroy() {
       if (this.closeSub){
           this.closeSub.unsubscribe();
       }
