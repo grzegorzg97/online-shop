@@ -1,0 +1,20 @@
+.row {
+    width: 500px;
+    height: 400px;
+    /* border: 1px black solid; */
+    position: relative;
+    top: 100px;
+    margin: auto;
+}
+.container {
+    /* border: solid red 1px; */
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+}
+.form-group {
+    margin: 50px 0 0 50px;
+    /* border: green solid 1px; */
+    width: 250px;
+}

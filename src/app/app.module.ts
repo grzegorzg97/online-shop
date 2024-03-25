@@ -14,6 +14,10 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemFlatComponent } from './item-flat/item-flat.component';
+import { AuthComponent } from './auth/auth.component';
+import { AlertComponent } from './shared/alert/alert.component';
+import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,7 +37,11 @@ import { ItemFlatComponent } from './item-flat/item-flat.component';
     MaterialModule,
     FormsModule,
     ItemDetailsComponent,
-    ItemFlatComponent
+    ItemFlatComponent,
+    AuthComponent,
+    AlertComponent,
+    PlaceholderDirective,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

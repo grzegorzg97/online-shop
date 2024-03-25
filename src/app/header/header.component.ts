@@ -6,6 +6,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { Item } from '../shared/item.model';
 import { ItemService } from '../item.service';
+import { AuthService } from '../auth/auth.service';
+import { Subscription } from 'rxjs'
 
 
 @Component({
@@ -16,8 +18,23 @@ import { ItemService } from '../item.service';
   imports: [MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, CommonModule],
 })
 export class HeaderComponent {
-  
+
   @Input() items: Item;
+  isAuthenticated = false;
+  private userSub: Subscription;
+
+  constructor ( public authService: AuthService, public itemService:ItemService) {}
+
+  ngOnInit() {
+      this.userSub = this.authService.user.subscribe(user =>{
+      this.isAuthenticated = !!user ;
+      });
+  }
+  onLogout(){
+      this.authService.logout();
+  }
   
-  constructor(public itemService:ItemService) {}
+  ngOnDestroy(){
+      this.userSub.unsubscribe();
+  }
 }
