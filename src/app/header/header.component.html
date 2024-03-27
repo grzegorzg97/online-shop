@@ -10,8 +10,8 @@
           <span class="auto-spacer"></span>
         </div>
         <div class="login-btn">
-          <button mat-raised-button class="login" routerLinkActive="active"><a routerLink="login">Logowanie</a></button>
-          <button mat-raised-button>Rejestracja</button>
+          <button mat-raised-button class="login"><a routerLink="login">Logowanie</a></button>
+          <button *ngIf="isAuthenticated" mat-raised-button (click)="onLogout()" >Wyloguj</button>
         </div>
       <button mat-icon-button>
         <mat-icon>share</mat-icon>

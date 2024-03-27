@@ -68,10 +68,12 @@ body
     color: #363636;
     text-decoration: none;
     transition: 0.3s;
+    
 }
 
 .product-details h4 a:hover {
     color: #fbb72c;
+    cursor: pointer;
 }
 
 .product-details p {

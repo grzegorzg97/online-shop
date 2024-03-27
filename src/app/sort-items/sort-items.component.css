@@ -1,0 +1,10 @@
+.container {
+    position: absolute;
+    left:77%;
+    top:80px;
+}
+.item-list{
+    position: relative;
+    top:130px;
+    margin:auto;
+}

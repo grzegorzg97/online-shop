@@ -18,6 +18,8 @@ import { AuthComponent } from './auth/auth.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { SortItemsComponent } from './sort-items/sort-items.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     AuthComponent,
     AlertComponent,
     PlaceholderDirective,
-    HttpClientModule
+    HttpClientModule,
+    LoadingSpinnerComponent,
+    SortItemsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

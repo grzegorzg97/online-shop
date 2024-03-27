@@ -1,22 +1,13 @@
 <div class="main">
   <div class="header"><app-header></app-header></div>
-    <!-- <mat-button-toggle-group [(ngModel)]="sortType" #group="matButtonToggleGroup">
-    <mat-button-toggle value="grid-list"><mat-icon>view_module</mat-icon>
-    </mat-button-toggle>
-    <mat-button-toggle value="flat-list"><mat-icon>view_list</mat-icon>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-  <div *ngIf="sortType === 'flat-list'">
-  <app-item-flat-list></app-item-flat-list>
-  </div>
-  <div *ngIf="sortType === 'grid-list'">
-  <app-item-list></app-item-list>
-  </div> -->
-    <app-auth></app-auth>
+    
+    <app-sort-items></app-sort-items>
+    <router-outlet></router-outlet>
+    <!-- <app-auth></app-auth> -->
     <!-- <app-item-details></app-item-details> -->
     <app-newsletter></app-newsletter>
     <app-footer></app-footer> 
-</div>
+
 
 
 

@@ -8,6 +8,7 @@ import { Item } from '../shared/item.model';
 import { ItemService } from '../item.service';
 import { AuthService } from '../auth/auth.service';
 import { Subscription } from 'rxjs'
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { Subscription } from 'rxjs'
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css'],
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, CommonModule],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, CommonModule, AppRoutingModule],
 })
 export class HeaderComponent {
 

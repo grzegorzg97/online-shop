@@ -1,0 +1,17 @@
+<div class="container">
+<mat-button-toggle-group [(ngModel)]="sortType" #group="matButtonToggleGroup">
+    <mat-button-toggle style="cursor: pointer;" value="grid-list"><mat-icon>view_module</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle style="cursor: pointer;" value="flat-list"><mat-icon>view_list</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div class="item-list">
+    <div *ngIf="sortType === 'flat-list'">
+    <app-item-flat-list></app-item-flat-list>
+    </div>
+    <div *ngIf="sortType === 'grid-list'">
+      <app-item-list></app-item-list>
+    </div>
+  </div>
+  

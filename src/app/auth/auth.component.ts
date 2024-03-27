@@ -6,22 +6,25 @@ import { Router } from "@angular/router";
 import { AlertComponent } from "../shared/alert/alert.component";
 import { PlaceholderDirective } from "../shared/placeholder/placeholder.directive";
 import { CommonModule } from "@angular/common";
+import { MaterialModule } from "../material.module";
+import { LoadingSpinnerComponent } from "../shared/loading-spinner/loading-spinner.component";
 
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [AlertComponent, PlaceholderDirective, CommonModule, FormsModule],
+  imports: [AlertComponent, PlaceholderDirective, CommonModule, FormsModule, MaterialModule, LoadingSpinnerComponent],
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
+  hide = true;
   isLoginMode = true;
   isLoading = false;
   error: string = null;
   @ViewChild(PlaceholderDirective) alertHost: PlaceholderDirective;
   private closeSub: Subscription;
 
-  constructor(private authService: AuthService, private router: Router, private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor(public authService: AuthService, private router: Router, private componentFactoryResolver: ComponentFactoryResolver) {}
 
   onSwitchMode(){
       this.isLoginMode = !this.isLoginMode;
@@ -80,5 +83,15 @@ export class AuthComponent {
       hostViewContainerRef.clear();
      });
   }
+  /* updateErrorMessage() {
+    if (this.email.hasError('required')) {
+      this.errorMessage = 'You must enter a value';
+    } else if (this.email.hasError('email')) {
+      this.errorMessage = 'Not a valid email';
+    } else {
+      this.errorMessage = '';
+    }
+  }
+} */
 }
 
