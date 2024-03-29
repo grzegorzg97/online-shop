@@ -18,7 +18,8 @@ export class ItemDetailsComponent implements OnInit {
   item: Item;
   id: number;
 
-  constructor(public itemService: ItemService, private route: ActivatedRoute, private router: Router) {
+  constructor(public itemService: ItemService, private route: ActivatedRoute, private router: Router,
+              private cartService: CartService) {
 
   }
   ngOnInit(): void {
@@ -30,7 +31,10 @@ export class ItemDetailsComponent implements OnInit {
     )
   }
 
+  addToCart() {
+    this.cartService.addToCart(this.item)
   }
+}
 
 
 

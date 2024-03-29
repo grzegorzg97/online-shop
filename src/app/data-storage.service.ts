@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ItemService } from './item.service';
 import { Item } from './shared/item.model';
-import { map, tap } from 'rxjs/operators';
+import {catchError, map, tap} from 'rxjs/operators';
 
 
 
@@ -33,7 +33,7 @@ export class DataStorageService {
       }),
       tap(items => {
         this.itemService.setItems(items)
-      })
+      }),
     )
   }
 }

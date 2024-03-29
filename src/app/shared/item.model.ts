@@ -1,6 +1,12 @@
 
+export interface Producer {
+  name: string;
+  items: Item[];
+}
+
+
 export class Item {
-    
+
     public id: number;
     public name: string;
     public description: string;
@@ -9,8 +15,8 @@ export class Item {
     public price: number;
     public discount: number;
     public producer: string;
-    
-    
+
+
 
     constructor(id:number,name:string, description: string, imagePath: string, weight:string, price: number, discount:number, producer: string){
         this.id=id;

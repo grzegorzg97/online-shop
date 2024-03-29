@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Item } from './shared/item.model';
+import {Item, Producer} from './shared/item.model';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class ItemService {
   itemsChanged = new Subject<Item[]>();
 
   items : Item[] = [
-    /* new Item (0,'Nazwa',
+     new Item (0,'Nazwa',
     'Opis',
     'https://img.freepik.com/premium-zdjecie/osiol-z-bialym-tlem-i-bialym-tlem_873925-22917.jpg',
     '500g',
@@ -51,8 +51,15 @@ export class ItemService {
     '500g',
     50,
     50,
-    'producent2'), */
+    'producent2'),
 ]
+
+  producer: Producer = {name: "producent1", items: this.items};
+
+  producer2: Producer = {name: "producent2", items: this.items};
+
+  producers: Producer[] = [this.producer, this.producer2 ]
+
   constructor() { }
 
     getItems(){

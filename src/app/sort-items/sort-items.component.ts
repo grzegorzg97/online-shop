@@ -5,6 +5,7 @@ import { ItemFlatListComponent } from '../item-flat-list/item-flat-list.componen
 import { ItemListComponent } from '../item-list/item-list.component';
 import { FormsModule } from '@angular/forms';
 import { ListType } from '../enums';
+import {DataStorageService} from "../data-storage.service";
 
 
 @Component({
@@ -18,7 +19,17 @@ export class SortItemsComponent implements OnInit {
   sortType: string;
   enum: typeof ListType = ListType;
 
+  constructor(private dsService: DataStorageService) {
+  }
+
   ngOnInit(): void {
     this.sortType = ListType.gridList
+    this.dsService.fetchItems().subscribe();
+  }
+
+  trolo(){
+    if(true){
+      console.log("sds")
+    }
   }
 }

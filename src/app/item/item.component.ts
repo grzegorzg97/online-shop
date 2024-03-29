@@ -24,4 +24,8 @@ export class ItemComponent {
     const url: string = '/items/' + id + '/details'
     this.router.navigateByUrl(url)
  }
+
+ checkDiscount(item: Item){
+   return item.price*(item.discount*0.01)
+ }
 }

@@ -12,7 +12,12 @@ import { CartService } from './shopping-cart.service';
 })
 export class ShoppingCartComponent {
 
- 
 
-  constructor(){}
+
+  constructor(public cartService: CartService){}
+
+  checkCart() {
+    console.log(this.cartService.listOfItems)
+
+  }
 }
