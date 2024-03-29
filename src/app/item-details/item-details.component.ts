@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { ItemService } from '../item.service';
 import { Item } from '../shared/item.model';
+import { CartService } from '../shopping-cart/shopping-cart.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-item-details',
@@ -12,7 +14,20 @@ import { Item } from '../shared/item.model';
   styleUrls: ['./item-details.component.css']
 })
 export class ItemDetailsComponent {
-  @Input() item: Item;
+
+  item: Item;
   
-  constructor(public itemService: ItemService) {}
-}
+  id: number = 3;
+
+  constructor(public itemService: ItemService, public cartService: CartService) {
+    // item = this.itemService.items.find
+  }
+
+    // addToCartOnClick(this.item){
+  //   this.cartService.addToCart()
+  // }
+
+
+  }
+
+

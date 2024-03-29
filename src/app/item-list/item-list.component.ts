@@ -4,6 +4,7 @@ import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { ItemComponent } from '../item/item.component';
 import { ItemService } from '../item.service';
+import { DataStorageService } from '../data-storage.service';
 
 @Component({
   selector: 'app-item-list',
@@ -14,7 +15,9 @@ import { ItemService } from '../item.service';
 })
 export class ItemListComponent {
 
-  constructor(public itemService:ItemService){
-
+  constructor(public itemService:ItemService, private dsService: DataStorageService){
+  }
+  onSaveItems(){
+    this.dsService.storeItems()
   }
 }

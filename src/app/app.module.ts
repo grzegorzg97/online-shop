@@ -17,9 +17,11 @@ import { ItemFlatComponent } from './item-flat/item-flat.component';
 import { AuthComponent } from './auth/auth.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SortItemsComponent } from './sort-items/sort-items.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AuthInterceptorService } from './auth/auth.interceptor.service';
 
 
 @NgModule({
@@ -45,9 +47,10 @@ import { SortItemsComponent } from './sort-items/sort-items.component';
     PlaceholderDirective,
     HttpClientModule,
     LoadingSpinnerComponent,
-    SortItemsComponent
+    SortItemsComponent,
+    ShoppingCartComponent
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:AuthInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

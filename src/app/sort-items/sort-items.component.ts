@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { ItemFlatListComponent } from '../item-flat-list/item-flat-list.component';
 import { ItemListComponent } from '../item-list/item-list.component';
 import { FormsModule } from '@angular/forms';
+import { ListType } from '../enums';
 
 
 @Component({
@@ -13,6 +14,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './sort-items.component.html',
   styleUrls: ['./sort-items.component.css']
 })
-export class SortItemsComponent {
+export class SortItemsComponent implements OnInit {
   sortType: string;
+  enum: typeof ListType = ListType;
+
+  ngOnInit(): void {
+    this.sortType = ListType.gridList
+  }
 }

@@ -1,5 +1,5 @@
 <mat-toolbar  class="header">
-      <span class="shop-name" style="cursor: pointer;">Nazwa sklepu</span>
+      <span class="shop-name" style="cursor: pointer;" routerLink="">Nazwa sklepu</span>
       <span class="auto-spacer"></span>
         <div *ngFor="let item of itemService.items" class="btn-category">
           <button mat-button [matMenuTriggerFor]="menu2">{{ item.producer }}</button>
@@ -9,8 +9,11 @@
           </mat-menu>
           <span class="auto-spacer"></span>
         </div>
+        <a routerLink="/cart" class="cart-button">
+          <em class="material-icons">shopping_cart</em>Koszyk
+        </a>
         <div class="login-btn">
-          <button mat-raised-button class="login"><a routerLink="login">Logowanie</a></button>
+          <button *ngIf="!isAuthenticated" mat-raised-button class="login"><a routerLink="login" *ngIf="!isAuthenticated">Logowanie</a></button>
           <button *ngIf="isAuthenticated" mat-raised-button (click)="onLogout()" >Wyloguj</button>
         </div>
       <button mat-icon-button>
