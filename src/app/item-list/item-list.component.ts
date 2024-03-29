@@ -20,4 +20,7 @@ export class ItemListComponent {
   onSaveItems(){
     this.dsService.storeItems()
   }
+  onFetchItems(){
+    this.dsService.fetchItems().subscribe();
+  }
 }

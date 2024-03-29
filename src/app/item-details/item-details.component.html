@@ -1,14 +1,14 @@
 <div class="wrapper">
   <div class="product-img">
-    <img src="https://img.freepik.com/premium-zdjecie/osiol-z-bialym-tlem-i-bialym-tlem_873925-22917.jpg">
+    <img src="{{item.imagePath}}">
   </div>
   <div class="product-info">
     <div class="product-text">
-      <h1>Osiolek</h1>
-      <h2>producent osiołka</h2>
-      <p>opis osilka</p>
+      <h1>{{item.name}}</h1>
+      <h2>{{item.producer}}</h2>
+      <p>{{item.description}}</p>
     <div class="product-price-btn">
-      <p><span>60</span>zł</p>
+      <p><span>{{item.price}}</span>zł</p>
       <button type="button">Dodaj do koszyka</button>
     </div>
   </div>

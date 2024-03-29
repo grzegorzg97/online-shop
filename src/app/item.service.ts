@@ -10,7 +10,7 @@ export class ItemService {
   itemsChanged = new Subject<Item[]>();
 
   items : Item[] = [
-    new Item (0,'Nazwa',
+    /* new Item (0,'Nazwa',
     'Opis',
     'https://img.freepik.com/premium-zdjecie/osiol-z-bialym-tlem-i-bialym-tlem_873925-22917.jpg',
     '500g',
@@ -51,17 +51,20 @@ export class ItemService {
     '500g',
     50,
     50,
-    'producent2'),
+    'producent2'), */
 ]
   constructor() { }
 
     getItems(){
       return this.items.slice();
     }
-    
+
     setItems(items:Item[]){
       this.items = items;
       this.itemsChanged.next(this.items.slice())
+    }
+    getItem(index:number) {
+      return this.items[index]
     }
 
 }

@@ -5,17 +5,17 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { LogoComponent } from './logo/logo.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { SortItemsComponent } from './sort-items/sort-items.component';
+import { ItemsResolverService } from './items-resolver.service';
 
-/* import { AuthGuard } from './auth/auth.guard'; */
+
 
 
 
 const routes: Routes = [
   {path:'', component:SortItemsComponent},
-  {path: 'items/:id/details', component:ItemDetailsComponent},
+  {path: 'items/:id/details', component:ItemDetailsComponent, /* resolve: ItemsResolverService */},
   {path: 'sort', component: SortItemsComponent},
   {path: 'login', component: AuthComponent},
-  {path: 'details', component: ItemDetailsComponent},
   {path: 'cart', component:ShoppingCartComponent}
 ];
 

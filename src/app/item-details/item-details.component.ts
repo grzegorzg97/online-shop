@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { ItemService } from '../item.service';
 import { Item } from '../shared/item.model';
 import { CartService } from '../shopping-cart/shopping-cart.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-details',
@@ -13,21 +13,25 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.css']
 })
-export class ItemDetailsComponent {
+export class ItemDetailsComponent implements OnInit {
 
   item: Item;
-  
-  id: number = 3;
+  id: number;
 
-  constructor(public itemService: ItemService, public cartService: CartService) {
-    // item = this.itemService.items.find
-  }
-
-    // addToCartOnClick(this.item){
-  //   this.cartService.addToCart()
-  // }
-
+  constructor(public itemService: ItemService, private route: ActivatedRoute, private router: Router) {
 
   }
+  ngOnInit(): void {
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.id = +params ['id'];
+        this.item = this.itemService.getItem(this.id);
+      }
+    )
+  }
+
+  }
+
+
 
 
