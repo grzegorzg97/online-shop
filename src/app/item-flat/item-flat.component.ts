@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { Item } from '../shared/item.model';
+import { CartService } from '../shopping-cart/shopping-cart.service';
 
 
 @Component({
@@ -13,4 +14,9 @@ import { Item } from '../shared/item.model';
 })
 export class ItemFlatComponent {
   @Input() item: Item
+  constructor(private cartService: CartService) {}
+
+  OnaddToCart() {
+    this.cartService.addToCart(this.item)
+  }
 }

@@ -4,7 +4,7 @@
         <div *ngFor="let producer of itemService.producers" class="btn-category">
           <button mat-button [matMenuTriggerFor]="menu2">{{ producer.name }}</button>
           <mat-menu #menu2="matMenu">
-            <button mat-menu-item *ngFor="let item of producer.items">{{item.name}}</button>
+            <button mat-menu-item *ngFor="let item of producer.items" (click)="openItemDetails(item.id)">{{item.name}}</button>
 
           </mat-menu>
           <span class="auto-spacer"></span>

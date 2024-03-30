@@ -9,6 +9,7 @@ import { ItemService } from '../item.service';
 import { AuthService } from '../auth/auth.service';
 import { Subscription } from 'rxjs'
 import { AppRoutingModule } from '../app-routing.module';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,11 +21,13 @@ import { AppRoutingModule } from '../app-routing.module';
 })
 export class HeaderComponent {
 
+
   @Input() items: Item;
   isAuthenticated = false;
   private userSub: Subscription;
+ 
 
-  constructor ( public authService: AuthService, public itemService:ItemService) {}
+  constructor ( public authService: AuthService, public itemService:ItemService, private router: Router ) {}
 
   ngOnInit() {
       this.userSub = this.authService.user.subscribe(user =>{
@@ -34,6 +37,10 @@ export class HeaderComponent {
   onLogout(){
       this.authService.logout();
   }
+  openItemDetails(id: number){
+    const url: string = '/items/' + id + '/details'
+    this.router.navigateByUrl(url)
+ }
   
   ngOnDestroy(){
       this.userSub.unsubscribe();

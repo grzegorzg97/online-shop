@@ -31,7 +31,7 @@ export class ItemDetailsComponent implements OnInit {
     )
   }
 
-  addToCart() {
+  OnaddToCart() {
     this.cartService.addToCart(this.item)
   }
 }

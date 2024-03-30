@@ -8,8 +8,8 @@
       <h2>{{item.producer}}</h2>
       <p>{{item.description}}</p>
     <div class="product-price-btn">
-      <p><span>{{item.price}}</span>zł</p>
-      <button type="button" (click)="addToCart()">Dodaj do koszyka</button>
+      <p><span>{{item.price-(item.price*(item.discount*0.01))}}</span>zł</p>
+      <button type="button" (click)="OnaddToCart()">Dodaj do koszyka</button>
     </div>
   </div>
 </div>
